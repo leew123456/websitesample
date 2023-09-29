@@ -1,0 +1,650 @@
+*{
+    margin: 0;
+    padding: 0;
+        font-family: "Trirong", serif;
+}
+
+.header{   /* .header 第一页chopsticks&delights页面的大container*/
+    min-height: 100vh;   /*vh是整个屏幕的大小，mini-height意思是最少百分之100的整个屏幕*/
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(eduford_img/greatwall.jpg);
+    background-position: center;  /*this will center the image */
+    background-size: cover; /*确保image会fit the whole div*/
+    position: relative;       /*this will be the parent of the .text-box, which means.text-box will determin the location from edge of the .heaer container as x =0 and y=0. also when .header is move the .text-box also will move */
+    border: 9px solid grey;
+
+
+
+}
+
+
+/* 是整个上面的部分包括logo 和 home about....*/
+
+nav{
+    display: flex;
+    flex-direction: row;
+    padding: 2% 6%;
+    justify-content: space-between;  /*如果只有两个东西space between 会把一个放到最前一个放到最后*/
+    align-items: center;    /*把home about.....放在格子的中间*/
+}
+
+ /*univerity logo*/
+nav img{
+    width: 150px;
+
+}
+
+  /*home about DIV....*/
+.nav-links{
+    flex: 1;
+    text-align: right;
+
+    
+}
+
+
+
+
+.nav-links ul li{    /* home about.... 这些部分*/
+    list-style: none;
+    display: inline-block;   /*inline-block 是合并起来而且不是像block, home about...tabkes its own line*/
+    padding: 8px 12px;
+    position: relative;  /* relative 不在乎其他的设定中心点为它的中心点*/
+    
+}
+
+.nav-links ul li a{    /* a 的意思是hyperlink 就是链接 */
+    text-decoration: none;   /* 删除list默认的下划线*/
+    font-size: 13px;
+    color: white;
+}
+
+.nav-links ul li::after{   /* 在 nav-links ul li（就是右上角的list）后面穿插content里的东西 */
+    content: '';     /*content 是空是因为只要装饰而且不用什么文字*/
+    width: 0%;       /*width等于0 因为如果没碰到就不会显示*/
+    height: 2px;     /*红色的下划线animation的长度*/
+    display: block;
+    margin: auto;
+ 
+
+}
+.nav-links ul li:hover::after{
+    width: 100%;        /* 当鼠标hover到 list 的适合width突然变100而达到显示的效果  是100%是因为要take home about....full space而不是一半红色*/
+    transition: 0.5s;  
+
+} 
+.text-box{           /*包括中间的字体所有*/
+    width: 90%;
+    color: #fff;
+    position: absolute;      /* absolute 会找到最近的一个positio:abosolute 的box 为origin coordinated*/
+    top:50%;              /*在这个position:absolute， 它会先找.header作为它的parent而且确定左上角为x =0 y =0*/
+    left: 50%;            /*记住top50 left 50 with absolute之会把text-box的左上角放到中心 ----  只是上边缘不是box的center*/
+    transform: translate(-50%,-50%);   /* 配合这个加上top 和 left 来把box 放到parent 的中线点*/
+    text-align: center;   /* 把文字给放到.text-box的中心点*/
+    /* border: 12px solid green; */
+
+}
+
+.text-box h1{    /*headline*/
+    font-size: 60px;
+}
+.text-box p{    /*welcome*/
+    margin: 10px 0 40px;
+    font-size: 15px;
+    color: #fff;   
+}
+
+.hero-btn{    /*按钮的按键*/
+    display: inline-block;   /* 用inline block 所以不会take full space*/
+    text-decoration:none;    /*no underline inside the box*/  
+    color: white;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{         /*当鼠标碰到按钮的时候*/
+    border: 1px solid lightcoral;
+    background: lightcoral;
+    transition: 2s;
+
+}
+
+nav .fa{
+    display: none;
+}
+
+
+/*用于手机小屏幕的*/
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 20px;
+
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position:absolute;
+        background: red;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+
+    }
+    
+}
+/*-------------------------------------*/
+
+
+/*Course*/
+.course{
+    width: 80%;
+    margin: auto;  /*用来把东西自动放到已设定width的中间*/
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+
+
+}
+p{
+    columns: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+
+}
+
+.course h1{
+    text-align: center;
+    margin-top: 30px;  /*padding inside the box  margin is outside the box*/
+    margin-bottom: 30px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.course-col{
+    flex-basis: 30%; /* Adjust this value to control column width */
+    margin-bottom: 20px;
+    background: #E7E8D1;
+    border-radius: 20px;
+    transition: 0.5s;
+    font-size: 20px;
+    border: 5px solid transparent; /* Initially transparent border */
+
+}
+.course-col img{
+    width: 100%;
+    border-radius: 20px;
+    height: auto;
+    vertical-align: baseline;
+    
+
+}
+
+.course-col h3{
+    font-size: 30px;
+}
+
+
+
+
+
+.course-col:hover{
+    border-color:#EB9C5C; /* Change the border color on hover */
+    
+}
+
+
+
+/*-----------------------------------*/
+
+.Discount{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+}
+
+
+.Discount-row{
+    display: flex;
+    justify-content: space-between;
+}
+.Discount-row img{
+    max-width: 100%;     /*need to be 100 because it need to fits inside the flex which is 100% of the width of 80px*/
+    border-radius: 20px;
+}
+
+
+.Offer,.Offer1{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+
+}
+.Offer p,.Offer1 p{
+    padding: 0;
+    margin: 0;
+}
+
+.Offer1 img,.Offer img{
+    height: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   ----------------------------------    */
+
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*Campus*/
+
+/* .campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+} */
+
+.layer{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.layer:hover{
+    background-color: rgba(226, 0, 0, 0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff; 
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+
+}
+
+
+
+
+
+
+
+/* facilities ----------------------------------------- */
+ .facilities{
+     width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+
+.facilities-col p{
+    padding: 0;
+}
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+
+
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonials-col{
+    flex-basis: 45%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #E7E8D1;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    height: 150px;
+
+
+}
+.testimonials-col img{
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10%;
+}
+.testimonials-col p{
+    padding: 0;
+
+}
+.testimonials-col h3{
+    margin-top: 15px;
+    text-align: left;
+} 
+
+
+
+/* call to action*/
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(eduford_img/contactUS.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+
+}
+
+.cta h1{
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-wdith:700px){
+    .cta h1{
+        font: size 24px; ;
+    }
+}
+
+/*Footer*/
+
+.Footer{
+    width: 100%;
+    text-align: center;
+        padding: 30px 0;
+
+}
+.Footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+
+
+
+
+/*about us page*/
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(eduford_img/FoodTop.webp);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+/* .sub-header1000{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(eduford_img/FoodTop.webp);
+
+
+} */
+
+.sub-header h1{
+    margin-top: 100px;
+
+}
+
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+
+}
+.about-col img{
+    width: 100%;
+}
+.about-col h1 {
+    padding-top: 0;
+    display: inline; /* Ensure the text is displayed inline */
+}
+
+.about-col h1 strong {
+    text-decoration: none; /* Remove underline from the <strong> element */
+}
+
+.about-col h1::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background:lightcoral;
+    display: block;
+    transition: width 0.5s; /* Add a transition for a smooth effect */
+}
+
+.about-col h1:hover::after {
+    width: 100%; /* Expand the underline on hover */
+}
+
+
+
+
+.about-col p{
+    padding:15px 0 25px;
+}
+.red-btn{
+    border: 1px solid lightcoral;
+    background: transparent;
+    color: lightcoral;
+}
+
+.red-btn:hover{
+    color: white;
+
+}
+
+.opentime-container h2{
+    text-align: center;
+}
+
+.opentime-container{
+    width: 60%;
+    margin: 0 auto;
+    background-color: #E7E8D1;
+    border-radius: 30px;
+
+
+}
+.opentime-information{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+.opentimeWeek{
+}
+.opentimehours{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .course{
+    border: 5px solid red;
+
+}
+
+.course h1{
+    text-align: center;
+    margin-top: 30px;  /*padding inside the box  margin is outside the box*/
+    /* margin-bottom: 30px; */
+/* } */
+
+/* .row{
+    border: 5px solid purple;
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-between;
+    
+
+
+} */
+
+/* .course-col{
+    border: 2px solid gray;
+    flex-basis: calc(33.33% - 20px); 33.33% width for each column with spacing
+    
+} */
+
+
+
+
+
+
+
+/* .row{    is the container of the course infromation only
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;           如果类内的内容.row超出可用空间，它将换行到下一行
+    justify-content: space-between;
+    border: 5px solid blue; */
+
+
+/* }
+.course-col{
+    background-color: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    border: 5px solid gray;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+
+}
+.course-col:hover{
+    box-shadow:  0 0 20px 0px rgba(0,0, 0, 2);
+}
+ */
+
+
+
+
+
+
+
+

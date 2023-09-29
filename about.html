@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Univeristy website design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="sub-header">
+        <!-- <div class="sub-header1000"> -->
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class ="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+
+                </ul>
+                </div>
+
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+        <h1>About Us</h1>
+        <!-- </div> -->
+    </section>
+
+        <!--About us content-->
+
+        <section class="about-us">
+            <div class="row">
+                <div class="about-col">
+                    <h1> We're trustworthy.</h1>
+                    <p> For many years, we have been a cornerstone 
+                        of the community, celebrating the richness 
+                        of Chinese culture. Our décor reflects the elegance of ancient China, our staff take pride in sharing the stories behind each dish, and with a simple phone call or online order, you can enjoy the flavours of China from the comfort of your couch. Our carefully packaged dishes are delivered while hot and ready to savour!
+                    </p>
+                    <a href="" class="hero-btn red-btn">EXPORE NOW</a>
+                </div>
+
+                <div class="about-col">
+                <img src="eduford_img/moreabout.jpg">
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="opentime-container">
+              <h2>Our Opening Hours</h2>
+              <div class="opentime-information">
+
+                <div class="opentimeWeek">
+                    <h3>Monday</h3>
+                    <h3>Tuesay</h3>
+                    <h3>Wendesday</h3>
+                    <h3>thursadya</h3>
+                    <h3>friday</h3>
+                    <h3>Satuday</h3>
+                    <h3>sunday</h3>
+                </div>
+                <div class="opentimehours"> 
+                    <h3>17:00 - 23:20</h3>
+                    <h3>17:00 - 23:20</h3>
+                    <h3>17:00 - 23:20</h3>
+                    <h3>17:00 - 23:20</h3>
+                    <h3> 17:00 - 22:45</h3>
+                    <h3> 17:00 - 22:45</h3>
+                    <h3>17:00 - 23:20</h3>
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+    <section class="Footer">
+        <h4>About us</h4>
+        <p>over 15 years shop,with professional chefs who have been in the business for over 7 years.
+        </p>
+
+    </section>
+
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right ="0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right ="-200px";
+        }
+
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Univeristy website design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class ="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+          
+
+                </ul>
+                </div>
+
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+        <h1>Our Menu</h1>
+    </section>
+
+    <!--Course-->
+    <section class="course">
+        <h1>Food We Offer</h1>
+        <p> </p>
+
+        <div class="row">
+                <div class="course-col">
+                    <h3>Crispy Chili Beef </h3>
+                    <p>
+                        Crispy Chili Beef presents a symphony of flavors as tender beef strips meet the fiery kick of chilies, bathed in a tantalizing sweet chili sauce that dances on the palate.</p>
+                    <img src="eduford_img/Crispy-chil100.jpg">
+                    </div>
+        
+                <div class="course-col">
+                    <h3>Lemon Chicken</h3>
+                    <p>
+                        Indulge in the zesty allure of Lemon Chicken, featuring succulent pieces of crispy fried chicken infused with the bright and tangy essence of fresh lemons, </p>
+                        <img src="eduford_img/lemo-chicken.jpg">
+
+                    </div>
+                <div class="course-col">
+                    <h3>Kong Pao Chicken</h3>
+                    <p>
+                        Experience the bold flavors of Kung Pao Chicken, where tender pieces of succulent chicken are wok-tossed with roasted peanuts, fiery red chilies.</p>
+                        <img src="eduford_img/kongpao.jpg">>
+
+                    </div>
+                    
+        </div>
+
+
+        <div class="row">
+
+
+                <div class="course-col">
+                    <h3>Peking Duck</h3>
+                    <p>
+                        Savor the iconic taste of Peking Roast Duck, a culinary masterpiece where perfectly roasted duck boasts a crispy golden skin, accompanied by thin pancakes, fresh scallions, and a luscious hoisin sauce, creating a symphony of flavors and textures that's nothing short of extraordinary.</p>
+                        <img src="eduford_img/peking.jpg">
+
+                    </div>
+
+
+
+                <div class="course-col">
+                    <h3>Spring Rolls</h3>
+                    <p>
+                        Delight in the delicate crispness of Spring Rolls, where a medley of fresh vegetables, fragrant herbs, and succulent shrimp or chicken are expertly rolled in thin rice paper, served with a side of savory dipping sauce, offering a delightful burst of Asian flavors in every bite.</p>
+                        <img src="eduford_img/sprinroll.jpg">
+
+                    </div>
+
+
+                <div class="course-col">
+                    <h3>Char Siu</h3>
+                    <p>
+                        features succulent pork, marinated to perfection with a delectable blend of honey, hoisin sauce, and aromatic spices, resulting in a tantalizing harmony of sweet and savory flavors that will transport your taste buds to culinary bliss</p>
+                        <img src="eduford_img/chasiu.jpg">
+
+                    </div>
+
+         
+                
+
+        </div>
+
+    </section>
+
+
+        <!-- <section class="facilities"> 
+            <h1>our fafwhwaufh</h1>
+            <p>dwahuid dwaidj dwaidhawj wadhwauoidh dawdhjiowad</p>
+    
+            <div class="row">
+                <div class="facilities-col">
+                    <img src="eduford_img/library.png">
+                    <h3>world class libairy</h3>
+                    <P>dwajui dwai dwaiod dwaijh
+                        dwagdyuia dawjido</P>
+                    </div>
+    
+    
+              <div class="facilities-col">
+                <img src="eduford_img/basketball.png">
+                <h3>lartgets play ground</h3>
+                <P>dwajui dwai dwaiod dwaijh
+                    dwagdyuia dawjido</P>
+                </div>
+    
+    
+                <div class="facilities-col">
+                    <img src="eduford_img/cafeteria.png">
+                    <h3>the food cafer</h3>
+                    <P>dwajui dwai dwaiod dwaijh
+                        dwagdyuia dawjido</P>
+                    </div>
+                </div>
+        </section> -->
+
+
+
+
+
+
+
+
+        <section class="Discount">
+            <h1>Our Discount</h1>
+            <p>we offer varaible range of discount you can choose from</p>
+            <div class="Discount-row">
+                <div class="Offer1">
+                    <img src="eduford_img/prawcracker.jpg">
+                    <h3>Discount 1</h3>
+                    <p> buy two get one for free</p>
+                </div>
+
+                <div class="Offer">
+                    <img src="eduford_img/5-pound.webp">
+                    <h3>Discount2</h3>
+                    <p>buy two get one for free</p>
+                </div>
+
+                <div class="Offer">
+                    <img src="eduford_img/10pound.jpg">
+                    <h3>Dicount3</h3>
+                    <p>byt  two get on eofr  dwa </p>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+        
+
+        <!--testimonials-->
+
+
+
+        <!---call to action-->
+
+    <!---Footer-->
+    <section class="Footer">
+        <h4>About us</h4>
+        <p>over 15 years shop,with professional chefs who have been in the business for over 7 years.
+        </p>
+
+    </section>
+
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right ="0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right ="-200px";
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
